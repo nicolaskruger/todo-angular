@@ -1,0 +1,16 @@
+<p>todo-list works!</p>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+    <input id="name" type="text" formControlName="name">
+
+    <button class="button" type="submit">Purchase</button>
+
+</form>
+
+<div *ngFor="let todo of todoList" >
+    <h3>
+        {{todo.name}}
+    </h3>
+    <input type="checkbox" (onclick)="toggle(todo.id)" value={{todo.done}} name="" id="">
+</div>
